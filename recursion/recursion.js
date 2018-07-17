@@ -1,3 +1,15 @@
+function countdown(i) {
+  console.log(i)
+  if(i <= 0) { // base case
+    return;
+  } else { // recursive case
+    countdown(i-1)
+  }
+}
+
+countdown(5)
+
+
 // exercises from www.rithmschool.com
 
 // Write a function called power which takes in a base and an exponent.
