@@ -1,6 +1,6 @@
 function countdown(i) {
   console.log(i)
-  if(i <= 0) { // base case
+  if(i <= 1) { // base case
     return;
   } else { // recursive case
     countdown(i-1)
