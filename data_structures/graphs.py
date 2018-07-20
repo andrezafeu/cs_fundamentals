@@ -32,16 +32,21 @@ def search(name):
 search("you")
 
 
+
 # dijkstra algorithm (only works with positive weights)
+
 graph = {}
 graph["start"] = {}
 graph["start"]["a"] = 6
 graph["start"]["b"] = 2
+
 # neighbors
 print(graph["start"].keys())
+
 # weight of the edges from both neighbors
 print(graph["start"]["a"])
 print(graph["start"]["b"])
+
 # add rest of nodes and neighbors to the graph
 graph["a"] = {}
 graph["a"]["fin"] = 1
@@ -65,8 +70,9 @@ parents["fin"] = None
 
 processed = []
 
+
 def find_lowest_cost_node(costs):
-    lowest_cost = float("inf")
+    lowest_cost = infinity
     lowest_cost_node = None
     for node in costs:
         cost = costs[node]
@@ -74,6 +80,7 @@ def find_lowest_cost_node(costs):
             lowest_cost = cost
             lowest_cost_node = node
     return lowest_cost_node
+
 
 node = find_lowest_cost_node(costs)
 while node is not None:
@@ -87,4 +94,4 @@ while node is not None:
     processed.append(node)
     node = find_lowest_cost_node(costs)
 
-print(cost)
+print(costs)
